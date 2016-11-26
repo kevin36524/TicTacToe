@@ -1,8 +1,10 @@
 package com.example.patelkev.tictactoe;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -36,9 +38,10 @@ public class MainActivity extends Activity {
         setContentView(R.layout.main);
 
         // Set the drawables for the tiles
-        TicTacToeTile.setDrawableX(getResources().getDrawable(R.drawable.x));
-        TicTacToeTile.setDrawableO(getResources().getDrawable(R.drawable.circle));
-        TicTacToeTile.setDrawableBlank(getResources().getDrawable(R.drawable.blank));
+
+        TicTacToeTile.setDrawableX(ContextCompat.getDrawable(getApplicationContext(), R.drawable.x));
+        TicTacToeTile.setDrawableO(ContextCompat.getDrawable(getApplicationContext(), R.drawable.circle));
+        TicTacToeTile.setDrawableBlank(ContextCompat.getDrawable(getApplicationContext(), R.drawable.blank));
 
         ArrayList<TicTacToeDrawable> tileList = new ArrayList<TicTacToeDrawable>(GAME_TILE_IDS.length);
         mClickHandler = new TileClickHandler();
