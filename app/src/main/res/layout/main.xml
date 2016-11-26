@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myapp="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:background="@drawable/radial_background">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/linearLayoutToolbar" android:layout_gravity="center" android:background="#000000">
+        <CheckBox android:layout_width="wrap_content" android:text="@string/player_goes_first" android:layout_height="wrap_content" android:id="@+id/checkBoxPlayerFirst" android:textStyle="bold" android:textColor="#ffffff" android:checked="true"></CheckBox>
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/buttonEasyGame" android:text="@string/easy" android:minWidth="75dip"></Button>
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/buttonHardGame" android:text="@string/hard" android:minWidth="75dip"></Button>
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/linearLayoutMessage" android:background="#000000" android:orientation="vertical">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="3dip" android:layout_gravity="center" android:id="@+id/textViewStatusMessage" android:textColor="#fff" android:text="@string/playing_game" android:textSize="18dip"></TextView>
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent"
+        android:id="@+id/linearLayoutGameBoard" android:background="@drawable/whitesquare" android:layout_height="wrap_content" android:padding="10dip" android:layout_margin="20dip">
+
+        <TableLayout android:id="@+id/tableLayout1" android:layout_width="fill_parent"
+            android:weightSum="3" android:layout_height="wrap_content" android:layout_marginLeft="10dip" android:layout_marginRight="10dip">
+            <TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_weight="1">
+                <com.example.patelkev.tictactoe.TicTacToeTile
+                    android:adjustViewBounds="true" android:scaleType="fitXY"
+                    android:id="@+id/GameTile01" android:layout_height="wrap_content" myapp:row="0" myapp:col="0"
+                    android:layout_weight="1" android:layout_width="fill_parent" android:src="@drawable/blank"/>
+                <com.example.patelkev.tictactoe.TicTacToeTile
+                    android:layout_weight="1" android:scaleType="fitXY"
+                    android:adjustViewBounds="true" android:id="@+id/GameTile02" android:layout_height="wrap_content"
+                    myapp:row="0" myapp:col="1"
+                    myapp:borderLeft="true" myapp:borderRight="true"
+                    android:layout_width="fill_parent" android:src="@drawable/blank"/>
+                <com.example.patelkev.tictactoe.TicTacToeTile
+                    android:adjustViewBounds="true" android:scaleType="fitXY"
+                    android:layout_weight="1" android:id="@+id/GameTile03"
+                    myapp:row="0" myapp:col="2"
+                    android:layout_height="wrap_content" android:layout_width="fill_parent" android:src="@drawable/blank"/>
+            </TableRow>
+            <TableRow android:id="@+id/tableRow2" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_weight="1">
+                <com.example.patelkev.tictactoe.TicTacToeTile
+                    android:layout_width="wrap_content" android:adjustViewBounds="true"
+                    android:scaleType="fitXY" android:id="@+id/GameTile04"
+                    myapp:borderTop="true" myapp:borderBottom="true"
+                    myapp:row="1" myapp:col="0"
+                    android:layout_height="wrap_content" android:layout_weight="1" android:src="@drawable/blank"/>
+                <com.example.patelkev.tictactoe.TicTacToeTile
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:scaleType="fitXY"
+                    android:adjustViewBounds="true" myapp:borderTop="true" myapp:borderBottom="true"
+                    myapp:borderLeft="true" myapp:borderRight="true"
+                    myapp:row="1" myapp:col="1"
+                    android:id="@+id/GameTile05" android:src="@drawable/blank"/>
+                <com.example.patelkev.tictactoe.TicTacToeTile
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:adjustViewBounds="true" android:scaleType="fitXY"
+                    android:layout_weight="1" myapp:borderTop="true" myapp:borderBottom="true"
+                    myapp:row="1" myapp:col="2"
+                    android:id="@+id/GameTile06" android:src="@drawable/blank"/>
+            </TableRow>
+            <TableRow android:id="@+id/tableRow3" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_weight="1">
+                <com.example.patelkev.tictactoe.TicTacToeTile
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:adjustViewBounds="true"
+                    myapp:row="2" myapp:col="0"
+                    android:scaleType="fitXY" android:id="@+id/GameTile07" android:src="@drawable/blank"/>
+                <com.example.patelkev.tictactoe.TicTacToeTile
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:scaleType="fitXY"
+                    android:adjustViewBounds="true" myapp:borderLeft="true" myapp:borderRight="true"
+                    myapp:row="2" myapp:col="1"
+                    android:id="@+id/GameTile08" android:src="@drawable/blank"/>
+                <com.example.patelkev.tictactoe.TicTacToeTile
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:adjustViewBounds="true" android:scaleType="fitXY"
+                    android:layout_weight="1" myapp:row="2" myapp:col="2"
+                    android:id="@+id/GameTile09" android:src="@drawable/blank"/>
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+</LinearLayout>
