@@ -20,4 +20,8 @@ public class TicTacToeConstants {
     public static final int TURN_PLAYER = 0;
     public static final int TURN_COMPUTER = 1;
 
+    public enum GameResultState {
+        PLAYING, WINS, LOSE, DRAW
+    }
+
 }

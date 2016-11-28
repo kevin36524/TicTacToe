@@ -8,7 +8,6 @@ import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
-import android.content.res.Resources;
 
 import com.example.patelkev.tictactoe.Utils.TicTacToeConstants;
 import com.example.patelkev.tictactoe.Utils.TicTacToeDrawable;
